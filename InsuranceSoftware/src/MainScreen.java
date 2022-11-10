@@ -389,7 +389,7 @@ public class MainScreen extends JFrame {
         deleteBTN.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                File file = new File("D:/myfile.dat");
+                File file = new File("../data.dat");
                 try {
                     InputStream is = new FileInputStream(file);
                     ObjectInputStream ois = new ObjectInputStream(is);
@@ -943,7 +943,7 @@ public class MainScreen extends JFrame {
 
     public void SaveCustomerMapToDisk() throws IOException, ClassNotFoundException, ParseException {
 
-        File file = new File("D:/myfile.dat");
+        File file = new File("../data.dat");
         Integer mobilePhone = Integer.parseInt(phoneSub.getText());
 
         TreeMap<Integer,Customer> newMapToSave = new TreeMap<>();
@@ -967,7 +967,7 @@ public class MainScreen extends JFrame {
 
     private void searchCustomerByMobileNumber() throws IOException, ClassNotFoundException {
 
-        File file = new File("D:/myfile.dat");
+        File file = new File("../data.dat");
 
         InputStream is = new FileInputStream(file);
         ObjectInputStream ois = new ObjectInputStream(is);
@@ -983,7 +983,7 @@ public class MainScreen extends JFrame {
     private Customer claimsSearchCustomerByMobileNumber() throws IOException, ClassNotFoundException {
 
         Customer customer = new Customer();
-        File file = new File("D:/myfile.dat");
+        File file = new File("../data.dat");
 
         InputStream is = new FileInputStream(file);
         ObjectInputStream ois = new ObjectInputStream(is);
